@@ -13,7 +13,7 @@ pipeline {
 		stage('Test') {
             steps {
                 echo 'Test Starts!'
-                bat "\"C:/Program Files/dotnet/dotnet.exe\" test \"${workspace}/RazorJenkinsDotnetSampleProject.sln\""
+                bat "\"C:/Program Files/dotnet/dotnet.exe\" test \"${workspace}/RazorPageTests\""
                 echo 'Test Ends'
             }
         }
