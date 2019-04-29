@@ -11,6 +11,11 @@ namespace RazorPageTests
     {
         protected readonly HttpClient _client;
 
+        public UnitTest1(WebApplicationFactory<Startup> factory)
+        {
+            _client = factory.CreateClient();
+        }
+
         [Fact]
         public async Task Test1()
         {
