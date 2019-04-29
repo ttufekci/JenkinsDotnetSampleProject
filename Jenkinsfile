@@ -17,5 +17,13 @@ pipeline {
                 echo 'Test Ends'
             }
         }
+		
+		stage('Deploy') {
+            steps {
+                echo 'Deploy Starts!'
+                bat "\"C:/Program Files/dotnet/dotnet.exe\" publish \"${workspace}/SampleWebProject\" --output \"C:\tmp\websites\dotnetweb\""
+                echo 'Deploy Ends'
+            }
+        }		
     }
 }
