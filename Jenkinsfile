@@ -9,5 +9,13 @@ pipeline {
                 echo 'Build Ends'
             }
         }
+		
+		stage('Test') {
+            steps {
+                echo 'Test Starts!'
+                bat "\"C:/Program Files/dotnet/dotnet.exe\" test \"${workspace}/RazorJenkinsDotnetSampleProject.sln\""
+                echo 'Test Ends'
+            }
+        }
     }
 }
