@@ -23,7 +23,7 @@ namespace RazorPageTests
             response.EnsureSuccessStatusCode();
             var stringResponse = await response.Content.ReadAsStringAsync();
 
-            Assert.Contains("Welcome", stringResponse);
+            Assert.Contains("Onbirkod", stringResponse);
         }
     }
 }
